@@ -27,40 +27,43 @@ h1:hover {
   filter: opacity(80%);
 }
 
-.quarter-circle {
+.circle {
   position: fixed;
   height: 30px;
   width: 30px;
   background: tomato;
 }
 
-.qc1,.qc2,.qc3,.qc4 {
+.circle1,
+.circle2,
+.circle3,
+.circle4 {
   position: fixed;
   z-index: 1;
 }
 
-.qc1 {
+.circle1 {
   border-radius: 100%;
   bottom: -15px;
   right: -15px;
 }
-.qc2 {
+.circle2 {
   border-radius: 100%;
   bottom: -15px;
   left: -15px;
 }
-.qc3 {
+.circle3 {
   border-radius: 100%;
   top: -15px;
   left: -15px;
 }
-.qc4 {
+.circle4 {
   border-radius: 100%;
   top: -15px;
   right: -15px;
 }
 
-.quarter-circle:before {
+.circle:before {
   position: absolute;
   content: '';
   height: calc(100% + 10px);
@@ -72,15 +75,15 @@ h1:hover {
   animation: spin 10s linear infinite;
 }
 
-.qc1::after,
-.qc2::after,
-.qc3::after,
-.qc4::after {
+.circle1::after,
+.circle2::after,
+.circle3::after,
+.circle4::after {
   width: 20px;
   height: 20px;
 }
 
-.qc1::after {
+.circle1::after {
   bottom: 0;
   right: 0;
   content: '';
@@ -89,7 +92,7 @@ h1:hover {
   border-right: 2px solid whitesmoke;
   z-index: 10;
 }
-.qc2::after {
+.circle2::after {
   bottom: 0;
   left: 0;
   content: '';
@@ -99,7 +102,7 @@ h1:hover {
   z-index: 10;
 }
 
-.qc3::after {
+.circle3::after {
   top: 0;
   left: 0;
   content: '';
@@ -109,7 +112,7 @@ h1:hover {
   z-index: 10;
 }
 
-.qc4::after {
+.circle4::after {
   top: 0;
   right: 0;
   content: '';
