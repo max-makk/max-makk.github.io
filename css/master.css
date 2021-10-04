@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: whitesmoke;
+  background-image: url('../img/noise.png');
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #525252;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+h1:hover {
+  filter: opacity(80%);
+}
+
+.quarter-circle {
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  background: tomato;
+}
+
+.qc1,.qc2,.qc3,.qc4 {
+  position: fixed;
+  z-index: 1;
+}
+
+.qc1 {
+  border-radius: 100%;
+  bottom: -15px;
+  right: -15px;
+}
+.qc2 {
+  border-radius: 100%;
+  bottom: -15px;
+  left: -15px;
+}
+.qc3 {
+  border-radius: 100%;
+  top: -15px;
+  left: -15px;
+}
+.qc4 {
+  border-radius: 100%;
+  top: -15px;
+  right: -15px;
+}
+
+.quarter-circle:before {
+  position: absolute;
+  content: '';
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
+  border: 2px dotted tomato;
+  top: -7px;
+  left: -7px;
+  border-radius: inherit;
+  animation: spin 10s linear infinite;
+}
+
+.qc1::after {
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  content: '';
+  position: fixed;
+  border-bottom: 2px solid whitesmoke;
+  border-right: 2px solid whitesmoke;
+  z-index: 10;
+}
+.qc2::after {
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  content: '';
+  position: fixed;
+  border-bottom: 2px solid whitesmoke;
+  border-left: 2px solid whitesmoke;
+  z-index: 10;
+}
+
+.qc3::after {
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  content: '';
+  position: fixed;
+  border-top: 2px solid whitesmoke;
+  border-left: 2px solid whitesmoke;
+  z-index: 10;
+}
+
+.qc4::after {
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: 0;
+  content: '';
+  position: fixed;
+  border-top: 2px solid whitesmoke;
+  border-right: 2px solid whitesmoke;
+  z-index: 10;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
