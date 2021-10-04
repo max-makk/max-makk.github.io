@@ -72,9 +72,15 @@ h1:hover {
   animation: spin 10s linear infinite;
 }
 
-.qc1::after {
+.qc1::after,
+.qc2::after,
+.qc3::after,
+.qc4::after {
   width: 20px;
   height: 20px;
+}
+
+.qc1::after {
   bottom: 0;
   right: 0;
   content: '';
@@ -84,8 +90,6 @@ h1:hover {
   z-index: 10;
 }
 .qc2::after {
-  width: 20px;
-  height: 20px;
   bottom: 0;
   left: 0;
   content: '';
@@ -96,8 +100,6 @@ h1:hover {
 }
 
 .qc3::after {
-  width: 20px;
-  height: 20px;
   top: 0;
   left: 0;
   content: '';
@@ -108,8 +110,6 @@ h1:hover {
 }
 
 .qc4::after {
-  width: 20px;
-  height: 20px;
   top: 0;
   right: 0;
   content: '';
